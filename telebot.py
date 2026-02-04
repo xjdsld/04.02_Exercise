@@ -4,9 +4,6 @@ from datetime import date
 bot = telebot.TeleBot("") 
 user_data = {}
 
-def run_bot():
-    bot.polling()
-
 @bot.message_handler(commands=['start'])
 def start(message):
     user_data[message.chat.id] = {}
@@ -37,3 +34,7 @@ def get_ps(message):
     with open("result.txt", "w", encoding="utf-8") as f:
         f.write(template.format(**data))
     bot.send_message(message.chat.id, "Документ створено ✅")
+
+
+def run_bot():
+    bot.polling()
