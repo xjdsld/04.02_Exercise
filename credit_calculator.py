@@ -2,7 +2,7 @@ def annual_credit(credit_amount, years, percentage=0.1):
     total_credit_amount = credit_amount * (1 + percentage * years)
     return total_credit_amount
 
-def credit_console():
+def credit():
     while True:
         print("\n" + "="*30)
         try:
