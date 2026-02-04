@@ -1,4 +1,5 @@
 from datetime import date
+from database import save_user
 
 def data_enter():
     today = date.today()
